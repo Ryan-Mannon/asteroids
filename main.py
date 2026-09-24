@@ -27,13 +27,14 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
+
         for drawing in drawable:
             drawing.draw(screen)
+
         updatable.update(dt)
+        dt = clock.tick(60) / 1000
         pygame.display.flip()
 
-        
-        dt = clock.tick(60) / 1000
 
         
         
